@@ -1,0 +1,76 @@
+.displayweatherHeader{
+    grid-area: header;
+  }
+
+  .displayweatherHeader h2 {
+    text-align: center;
+    color: #76D1FF;
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+  .displayweatherofCity{
+    grid-area: city;
+    border-top: 1px solid #D6E0E7;
+    border-bottom: 1px solid #D6E0E7;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .displayFeelslike {
+    grid-area: feelslike;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .displayHumidity{
+    grid-area: humidity;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .displayweatherContainer {
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+    outline: none;
+    height: 400px;
+    width: 100%;
+    max-width: 350px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 3fr 80px;
+    grid-template-areas:
+      "header header header header"
+      "city city city city"
+      "feelslike feelslike humidity humidity"
+  }
+
+.displayFeelsliketext span, .displayHumiditytext span {
+  display: block;
+  width: 60px;
+  word-wrap: break-word;
+  font-size: 0.8em;
+}
+
+.thermoawesome, .humidityawesome {
+  font-size: 1.5em;
+  margin: 0.3em;
+  color:#84E0FF;
+}
+
+.locationdot {
+  color: #dde5eb;
+}
+
+.cloudDescription::first-letter {
+  text-transform: uppercase;
+}
